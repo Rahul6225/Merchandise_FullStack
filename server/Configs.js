@@ -19,8 +19,8 @@ DB.connect((err)=>{
     }
 });
 
-DB.query("select * from users ",(err,res)=>{
-    console.warn("Result",res);
-})
+// DB.query("select * from users ",(err,res)=>{
+//     console.warn("Result",res);
+// })
 
 module.exports = DB;
