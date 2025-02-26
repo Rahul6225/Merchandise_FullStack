@@ -2,7 +2,8 @@ const express = require("express");
 const DB = require("./configs/Configs.js");
 const cors = require("cors");
 require("dotenv").config();
-const productroutes = require('./Routes/product.js')
+const productroutes = require("./Routes/product.js");
+const cartroutes = require('./Routes/cart.js');
 
 const app = express();
 app.use(cors());
@@ -13,35 +14,24 @@ const port = process.env.PORT || 5000;
 // HOMEPAGE ROUTE
 app.get("/", (req, res) => {
   res.send("HOMEPAGE");
+  console.log("Home Page viewed");
 });
 
 // GET ALL PRODUCTS
-app.use('/',productroutes);
+app.use("/products", productroutes);
 
+// ADD A PRODUCT TO WEBSITE
+app.use("/add-product", productroutes);
 
-// ADD A PRODUCT (POST REQUEST)
-app.use('/add-product',productroutes);
+//Delete Product FROM WEBSITE
+app.use("/", productroutes);
 
-app.delete('/products/:id',(req,res)=>{
-    const {id} = req.params;
-    //check if product is exists
-    const checkinsql = "SELECT * FROM products WHERE id = ?";
-    DB.query(checkinsql,[id],(err,result)=>{
-        if(err) return res.status(500).json({err:err.message});
+//ADD ITEM FROM cart
+app.use("/",cartroutes)
 
-        if(result.length == 0){
-            return res.status(404).json({message:"Product not found"});
-        }
-        const sql = "DELETE FROM products WHERE id = ?";
-        DB.query(sql,[id],(err,result)=>{
-            if(err) res.send(500).json({error:err.message});
-            res.json({message:"Product Delete"})
-            console.log("Product deleted");
-        })
-    })
+//GET ITEMS FROM CAFRT
+app.use('/',cartroutes)
 
-    
-})
 
 app.listen(port, () => {
   console.log(`Server is Running on port ${port}`);
