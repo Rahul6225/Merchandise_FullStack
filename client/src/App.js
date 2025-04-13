@@ -30,7 +30,7 @@ function App() {
         <div className="product-list">
           <div className="product-card">
             <img src={tshirt} alt="T-Shirt" />
-            <h3>T-Shirt</h3>
+            <h3>Shirt</h3>
             <p>$20.00</p>
           </div>
           <div className="product-card">
