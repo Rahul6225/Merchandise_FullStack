@@ -1,7 +1,7 @@
 
 const MainLoader = () => {
   return (
-    <div>MainLoader</div>
+    <div>Loading.....</div>
   )
 }
 

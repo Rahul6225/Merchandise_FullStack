@@ -59,7 +59,7 @@ const AdminSidebar = () => {
             : {}
         }
       >
-        <h2>Logo.</h2>
+        <h2>SnapKart-ADMIN</h2>
         <DivOne location={location} />
         <DivTwo location={location} />
         <DivThree location={location} />
@@ -90,18 +90,18 @@ const DivOne = ({ location }: { location: Location }) => (
         Icon={RiShoppingBag3Fill}
         location={location}
       />
-      <Li
+      {/* <Li
         url="/admin/customer"
         text="Customer"
         Icon={IoIosPeople}
         location={location}
-      />
-      <Li
+      /> */}
+      {/* <Li
         url="/admin/transaction"
         text="Transaction"
         Icon={AiFillFileText}
         location={location}
-      />
+      /> */}
     </ul>
   </div>
 );
@@ -116,25 +116,25 @@ const DivTwo = ({ location }: { location: Location }) => (
         Icon={FaChartBar}
         location={location}
       />
-      <Li
+      {/* <Li
         url="/admin/chart/pie"
         text="Pie"
         Icon={FaChartPie}
         location={location}
-      />
-      <Li
+      /> */}
+      {/* <Li
         url="/admin/chart/line"
         text="Line"
         Icon={FaChartLine}
         location={location}
-      />
+      /> */}
     </ul>
   </div>
 );
 
 const DivThree = ({ location }: { location: Location }) => (
   <div>
-    <h5>Apps</h5>
+    {/* <h5>Apps</h5>
     <ul>
       <Li
         url="/admin/app/stopwatch"
@@ -154,7 +154,7 @@ const DivThree = ({ location }: { location: Location }) => (
         Icon={FaGamepad}
         location={location}
       />
-    </ul>
+    </ul> */}
   </div>
 );
 
