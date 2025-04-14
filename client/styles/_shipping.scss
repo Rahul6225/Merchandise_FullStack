@@ -1,0 +1,67 @@
+.shipping {
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 4rem);
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  > button {
+    background-color: transparent;
+    border: 0;
+    transition: all 1s ease;
+    > svg {
+      @include square(2rem);
+      &:hover {
+        transform: translateX(-5px);
+      }
+    }
+  }
+  > .shipping-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    > input {
+      width: 20rem;
+      padding: 1rem;
+      margin: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid rgb(80, 77, 77);
+      color: rgb(62, 62, 62);
+    }
+    > select {
+      width: 20rem;
+      padding: 1rem;
+      margin: 0.5em;
+      border-radius: 5px;
+      border: 1px solid rgb(80, 77, 77);
+      color: rgb(62, 62, 62);
+      cursor: pointer;
+    }
+    > h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 400;
+      letter-spacing: 5px;
+    }
+    > button {
+      background-color: $color3;
+      padding: 1rem;
+      width: 20rem;
+      align-self: center;
+      border-radius: 5px;
+      box-shadow: none;
+      color: white;
+      letter-spacing: 3px;
+      border: 0px;
+      margin-top: 1rem;
+    }
+  }
+  > button {
+    flex: none;
+    position: absolute;
+    top: 0rem;
+    left: 5rem;
+  }
+}

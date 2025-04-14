@@ -1,0 +1,93 @@
+.search {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  //   padding: 2rem;
+  > aside {
+    height: 100%;
+    width: 20%;
+    margin-left: 2rem;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+      rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 2rem;
+    align-items: flex-start;
+    > h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 3px;
+      align-self: center;
+    }
+    > div {
+      > select {
+        // width: 12rem;
+        width: 120%;
+        padding: 0.75rem;
+        margin: 0.5em;
+        border-radius: 5px;
+        border: 1px solid rgb(80, 77, 77);
+        color: rgb(62, 62, 62);
+        cursor: pointer;
+      }
+      > input {
+        background: red;
+        width: 12rem;
+        min-width: 100%;
+      }
+      > h4 {
+        font-size: 1.1rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  > main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    > .searched-product {
+      width: 90%;
+      //   height: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-left: auto;
+      margin-right: auto;
+      > .product-card {
+        width: 15rem;
+        height: 18rem;
+      }
+    }
+    > h1 {
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+    > input {
+      width: 20rem;
+      padding: 1rem;
+      margin: 0.5em;
+      border-radius: 5px;
+      border: 0px solid rgba(80, 77, 77, 0);
+      color: rgb(62, 62, 62);
+      border: none;
+      outline: none;
+    }
+    > article {
+      margin-top: 1.5rem;
+      align-self: center;
+      display: flex;
+      gap: 1rem;
+      > button {
+        padding: 0.5rem 1rem;
+        background-color: $color3;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+      }
+    }
+  }
+}
