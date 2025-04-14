@@ -1,0 +1,60 @@
+/* Clean black background, no texture */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #111;
+  padding: 0;
+  /* No extra padding */
+  height: 300px;
+  /* Set a fixed height, you can adjust */
+}
+
+/* Continuous horizontal scroll */
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+  height: 100%;
+}
+
+/* Slide containers – no margin, sharp corners */
+.slide {
+  flex: 0 0 auto;
+  width: 220px;
+  /* or auto if you want image width */
+  height: 100%;
+}
+
+/* Image styles – no spacing or border radius */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  filter: none;
+  transition: transform 0.3s ease;
+}
+
+/* Optional: zoom on hover */
+.slide img:hover {
+  transform: scale(1.02);
+}
+
+/* Scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .slide {
+    width: 150px;
+  }
+}
