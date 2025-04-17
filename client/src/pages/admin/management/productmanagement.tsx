@@ -25,12 +25,12 @@ const Productmanagement = () => {
   const [updateProduct] = useUpdateProductMutation();
   const [deleteProduct] = useDeleteProductMutation();
 
-  // console.log(data)
-  // const [price, setPrice] = useState<number>(2000);
-  // const [stock, setStock] = useState<number>(10);
-  // const [name, setName] = useState<string>("Puma Shoes");
-  // const [photo, setPhoto] = useState<string>(img);
-  // const [category, setCategory] = useState<string>("footwear");
+  console.log(data)
+  const [price, setPrice] = useState<number>(2000);
+  const [stock, setStock] = useState<number>(10);
+  const [name, setName] = useState<string>("Puma Shoes");
+  const [photo, setPhoto] = useState<string>(img);
+  const [category, setCategory] = useState<string>("footwear");
 
   const [product, setProduct] = useState({
     price: 0,
